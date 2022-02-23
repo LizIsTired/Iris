@@ -7,6 +7,7 @@ import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.RenderBuffers;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
@@ -31,4 +32,16 @@ public interface LevelRendererAccessor {
 
 	@Accessor("level")
 	ClientLevel getLevel();
+	
+	@Accessor("frameId")
+	int getFrameId();
+
+	@Accessor("frameId")
+	void setFrameId(int frame);
+
+	@Accessor("renderBuffers")
+	RenderBuffers getRenderBuffers();
+
+	@Accessor("renderBuffers")
+	void setRenderBuffers(RenderBuffers buffers);
 }
